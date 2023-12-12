@@ -1,0 +1,11 @@
+<div class="grid">
+  @for (card of cards;track card.id) {
+    <div class="col-12 md:col-6 lg:col-4 xl:col-3 card">
+      {{ asCard(card).name }}
+      <img src="{{asCard(card).card_images}}"
+           alt="">
+    </div>
+  } @empty {
+    <li> There are no items.</li>
+  }
+</div>
